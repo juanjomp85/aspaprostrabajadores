@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LinkCard } from '@/components/LinkCard';
-import { CategoryFilter } from '@/components/CategoryFilter';
-import { quickLinks, categories } from '@/data/links';
+/* import { CategoryFilter } from '@/components/CategoryFilter'; */
+import { quickLinks } from '@/data/links';
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory] = useState<string | null>(null);
   
   const filteredLinks = selectedCategory
     ? quickLinks.filter(link => link.category === selectedCategory)
